@@ -1,0 +1,17 @@
+{
+  "session": 5,
+  "block": 2,
+  "date": "2026-02-25",
+  "type": "class",
+  "duration_min": 90,
+  "partners_or_opponents": ["Coach Jen", "class of six"],
+  "location": "Presidio Wall Courts, court 3",
+  "arrived": "Curious. Told Jen about the third-set faults from Saturday.",
+  "session_narrative": "Jen watched me serve for a while and said the toss was drifting behind me on second serve, which was why I was pushing them long or into the tape. She wanted me to try a slightly higher toss farther out front. I did maybe forty serves with the new toss. It felt weird. Half the time I caught it and re-tossed. She said give it two weeks.",
+  "tracked": {
+    "first_serve_pct": null,
+    "double_faults": null,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "New toss feels wrong. Trust the process I guess. Two weeks."
+}

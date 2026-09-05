@@ -1,0 +1,17 @@
+{
+  "session": 11,
+  "block": 3,
+  "date": "2026-03-17",
+  "type": "match",
+  "duration_min": 110,
+  "partners_or_opponents": ["Rhea (partner)", "vs. the Sunday group"],
+  "location": "Golden Gate Park, court 12",
+  "arrived": "Same as last week. Tired, flat, but showed up.",
+  "session_narrative": "Doubles. Lost 4-6, 6-3, 4-6. Serve was a disaster in my head the whole time, one double fault total across three sets, all first serves went in on the key points. First set I kept driving returns straight back at the net player instead of down the middle or crosscourt away from her. Caught myself doing it midway through the first set. In the second set I actively aimed away from her and it opened up. Third set fell back into the pattern under pressure.",
+  "tracked": {
+    "first_serve_pct": 63,
+    "double_faults": 1,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Serve was a disaster (subjectively). I noticed I default to hitting to the opponent under pressure and had to consciously fix it, then lost the habit in the third. That's a real thing."
+}

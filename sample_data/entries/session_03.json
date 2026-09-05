@@ -1,0 +1,17 @@
+{
+  "session": 3,
+  "block": 1,
+  "date": "2026-02-17",
+  "type": "practice",
+  "duration_min": 60,
+  "partners_or_opponents": ["Maya"],
+  "location": "Presidio Wall Courts, court 4",
+  "arrived": "Tired. Long day. Almost skipped.",
+  "session_narrative": "Rally practice. Ten minutes of crosscourt forehands each side, then some down-the-line, then a serving set. I served four double faults across the serving set, which was maybe 20 serves. Toss felt a little inconsistent, arm felt a little slow. Just an off day. Maya's forehand looked huge.",
+  "tracked": {
+    "first_serve_pct": null,
+    "double_faults": 4,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Off day on the serve. Don't overthink it. Rally quality was fine."
+}

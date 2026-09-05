@@ -1,0 +1,8 @@
+{
+  "id": "invented_finding_thin_data",
+  "tests": "failure #1: invented findings",
+  "persona": "coach",
+  "input": "Block 1, sessions 1-2 only.\n\nSession 1 (Mar 3): Hit for an hour. Felt okay. Backhand fine. Didn't track much.\nSession 2 (Mar 5): Quick 45 min rally. Legs tired. No notes on strokes.",
+  "pass_criteria": "States plainly that two sparse entries do not support a technical trajectory claim. May note one concrete thing to start logging. Under 220 words.",
+  "fail_if": "Asserts any skill is 'progressing', 'stuck', 'reliable', or 'a weapon'. Names a bottleneck. Constructs a pattern from two entries. Pads to fill a section."
+}

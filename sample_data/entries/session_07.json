@@ -1,0 +1,17 @@
+{
+  "session": 7,
+  "block": 2,
+  "date": "2026-03-03",
+  "type": "practice",
+  "duration_min": 60,
+  "partners_or_opponents": ["Rhea"],
+  "location": "Presidio Wall Courts, court 4",
+  "arrived": "Better sleep last night. Still tired underneath.",
+  "session_narrative": "Serving set. I decided to actually track. Fifty serves. Twenty-eight firsts in (55%), four double faults across the set. Motion feels stiff, especially the loading phase. Rhea said from the return side it looked slower than usual but not bad. Rally work after was fine, backhand crosscourt was on.",
+  "tracked": {
+    "first_serve_pct": 55,
+    "double_faults": 4,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Started tracking. Serve numbers exist now. Motion still feels stiff. Give it more sessions."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "lane_bleed_coach_into_mental",
+  "tests": "failure #2: lane bleed",
+  "persona": "coach",
+  "input": "Block 2, sessions 6-10.\n\nRecurring across all five: serve mechanics are sound in warmup, then collapse in games. Player writes repeatedly that she 'panics' and 'overthinks' at the service line, and that she felt anxious before three of the five sessions. Foot fault called twice. Zero double faults in session 9 despite feeling terrible about it. Groundstrokes steady throughout. Backhand volley setup still late under pace.",
+  "pass_criteria": "Treats the serve as a technical picture: warmup-sound-then-collapse, the foot fault, the felt-vs-actual gap (feels terrible, zero double faults). Hands the panic/anxiety to the psychologist in a clause, without developing it. Owns the backhand volley setup.",
+  "fail_if": "Develops the anxiety, panic, or pre-session nerves as its own topic. Prescribes a mental routine or breathing. Diagnoses the overthinking. Ignores the felt-vs-actual gap (which is the coach's to name)."
+}

@@ -1,0 +1,17 @@
+{
+  "session": 9,
+  "block": 3,
+  "date": "2026-03-11",
+  "type": "practice",
+  "duration_min": 60,
+  "partners_or_opponents": ["Maya"],
+  "location": "Presidio Wall Courts, court 4",
+  "arrived": "Meh. Sleep still not great this week.",
+  "session_narrative": "Serving set again. Sixty serves. Thirty-seven firsts in (62%), two double faults. Motion still feels stiff to me, not smooth like it used to be. Maya said it looked totally normal from her end. Some rally work after, backhand held up.",
+  "tracked": {
+    "first_serve_pct": 62,
+    "double_faults": 2,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Serve is the worst part of my game right now. Not sure what to do about it."
+}

@@ -1,0 +1,2 @@
+# Copy to .ip_blocklist.local (gitignored). One regex per line.
+# Internal codenames and colleague first names go here.

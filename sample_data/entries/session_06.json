@@ -1,0 +1,17 @@
+{
+  "session": 6,
+  "block": 2,
+  "date": "2026-02-28",
+  "type": "match",
+  "duration_min": 90,
+  "partners_or_opponents": ["Rhea (partner)", "vs. two players from a different club"],
+  "location": "Golden Gate Park, court 12",
+  "arrived": "Bad sleep two nights running. Foggy. Coffee.",
+  "session_narrative": "Doubles. Lost 4-6, 5-7. Serve was hesitant the whole match. I kept trying to remember Jen's new toss and second-guessing on serve two. Four double faults, all on second serve, all long. First serves went in okay when I stopped thinking about the toss and just hit. Rhea was solid. Return games we were fine, holding serve was where we bled.",
+  "tracked": {
+    "first_serve_pct": null,
+    "double_faults": 4,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Serve feels worse now than before Jen changed it. Don't trust the new toss under pressure yet. Sleep has been bad."
+}

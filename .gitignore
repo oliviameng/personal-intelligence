@@ -1,0 +1,7 @@
+.ip_blocklist.local
+.env
+__pycache__/
+*.pyc
+node_modules/
+# never commit real journal exports
+private/

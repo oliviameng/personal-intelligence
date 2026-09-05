@@ -1,0 +1,17 @@
+{
+  "session": 4,
+  "block": 1,
+  "date": "2026-02-21",
+  "type": "match",
+  "duration_min": 120,
+  "partners_or_opponents": ["vs. Priya"],
+  "location": "Presidio Wall Courts, court 2",
+  "arrived": "Focused. Ate before, warmed up properly.",
+  "session_narrative": "Singles. Lost 6-4, 3-6, 5-7. Close third set, I had it at 5-4 and lost my serve. Five double faults across the match, three of them in the third set. Priya kept moving me side to side and I kept sending the ball right back to where she was, especially on the run. She had the middle of the court and I never made her cover the whole thing. Serve was okay overall but the third set faults were annoying.",
+  "tracked": {
+    "first_serve_pct": null,
+    "double_faults": 5,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Third set nerves showed up on the serve. Also I need to hit to open court more, I kept feeding her the ball back to where she stood."
+}

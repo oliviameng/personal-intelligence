@@ -1,0 +1,17 @@
+{
+  "session": 12,
+  "block": 3,
+  "date": "2026-03-21",
+  "type": "practice",
+  "duration_min": 75,
+  "partners_or_opponents": ["Maya"],
+  "location": "Presidio Wall Courts, court 4",
+  "arrived": "Better. Slept eight hours last night for the first time in a while.",
+  "session_narrative": "Serving set. Fifty serves. Thirty-four firsts in (68%), zero double faults. Feels like a fluke. Motion still doesn't feel right. Rally afterward, I noticed Maya was cheating to her forehand side on returns, so I started aiming at the backhand corner and she couldn't get to it. First time I've actually read someone's positioning in a rally and used it.",
+  "tracked": {
+    "first_serve_pct": 68,
+    "double_faults": 0,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Zero double faults but the serve still doesn't feel right. Also — read Maya's positioning and exploited it. That's new."
+}

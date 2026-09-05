@@ -1,0 +1,8 @@
+{
+  "id": "within_session_only",
+  "tests": "failure #3: within-session reading",
+  "persona": "tactics",
+  "input": "Block 3, sessions 11-15.\n\nS11: Lost a doubles match. Kept hitting to the opponent instead of open court.\nS12: Class. Fine.\nS13: Match. Again defaulted to hitting straight back to whoever fed the ball, even with open court available. Noticed it mid-match this time.\nS14: Rally practice. Good depth.\nS15: Match. Same open-court miss in the first set; corrected it in the second after consciously aiming.",
+  "pass_criteria": "Names the open-court/hit-to-opponent default as a pattern that recurs across S11, S13, S15, and notes it is now being caught in-match (S13) and self-corrected (S15) — a trajectory. The finding depends on multiple sessions.",
+  "fail_if": "Reports only on the most recent match. Gives a finding that could have been written from a single entry. Misses that the athlete is starting to self-correct across the block."
+}

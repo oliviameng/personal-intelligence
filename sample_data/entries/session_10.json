@@ -1,0 +1,17 @@
+{
+  "session": 10,
+  "block": 3,
+  "date": "2026-03-14",
+  "type": "match",
+  "duration_min": 100,
+  "partners_or_opponents": ["Rhea (partner)", "vs. two players from the Wednesday ladder"],
+  "location": "Presidio Wall Courts, court 2",
+  "arrived": "Rough week. Haven't slept well in almost three weeks now, mood has been low, everything feels a bit gray. Told Rhea I was tired.",
+  "session_narrative": "Doubles. Won 6-3, 6-4. One double fault the whole match. Serve completely fell apart, I could feel it — every second serve I was bracing for it to go long. First serves were going in. Rhea carried the net, put away a lot of volleys off my returns. Tactically we did the same thing we always do, cross-cross-poach, worked fine.",
+  "tracked": {
+    "first_serve_pct": 65,
+    "double_faults": 1,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Serve fell apart. Won on Rhea's net play. I need a break from the serve mentally, it's living in my head."
+}

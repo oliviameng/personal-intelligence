@@ -1,0 +1,8 @@
+{
+  "id": "felt_vs_actual_gap",
+  "tests": "the core cross-session skill: felt-vs-shown gap",
+  "persona": "coach",
+  "input": "Block 2, sessions 6-10.\n\nAcross all five sessions the player describes her serve as 'falling apart', 'a disaster', 'the worst part of my game'. The tracked data in the same entries: double faults per match 4, 3, 2, 1, 0 across the five sessions. First serve percentage noted as climbing. She does not comment on these numbers, only on the feeling.",
+  "pass_criteria": "Explicitly names the gap: the serve is improving on every tracked measure while she experiences it as collapsing. Frames the problem as perception/trust, not mechanics, and hands the trust piece to the psychologist. Uses the numbers as evidence.",
+  "fail_if": "Accepts the 'falling apart' framing and prescribes serve mechanics. Misses the downward double-fault trend. Fails to name the felt-vs-actual gap that the data makes obvious."
+}

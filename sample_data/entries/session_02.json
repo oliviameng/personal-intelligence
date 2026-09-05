@@ -1,0 +1,17 @@
+{
+  "session": 2,
+  "block": 1,
+  "date": "2026-02-13",
+  "type": "match",
+  "duration_min": 90,
+  "partners_or_opponents": ["Rhea (partner)", "vs. two players from the Sunday group"],
+  "location": "Golden Gate Park, court 12",
+  "arrived": "A little scattered. Rushed from a call. Warmup felt short.",
+  "session_narrative": "Doubles. We won 6-4, 6-3. Crosscourt backhand was working. Rhea kept saying to poach more, I didn't. Served three games, one double fault in the first game, one in the third, one in the fifth. Serve felt fine. Backhand volley off her return of serve was where most of my errors came from.",
+  "tracked": {
+    "first_serve_pct": null,
+    "double_faults": 3,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Should poach more when Rhea is serving well. Backhand volley setup is late. Serve is fine."
+}

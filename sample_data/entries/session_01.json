@@ -1,0 +1,17 @@
+{
+  "session": 1,
+  "block": 1,
+  "date": "2026-02-10",
+  "type": "drill",
+  "duration_min": 75,
+  "partners_or_opponents": ["Maya (drill partner)"],
+  "location": "Presidio Wall Courts, court 4",
+  "arrived": "Slept fine. Cold morning, took a while to warm up. Coming off a two-week break.",
+  "session_narrative": "Approach volleys with Maya feeding. Good rhythm on the forehand side, backhand approach was long a few times. Served for maybe 15 minutes at the end, felt fine, didn't count faults. Serve motion feels grooved.",
+  "tracked": {
+    "first_serve_pct": null,
+    "double_faults": null,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Approach volley footwork on the backhand side needs work. Serve is solid. Good session to get back into it."
+}

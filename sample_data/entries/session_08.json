@@ -1,0 +1,17 @@
+{
+  "session": 8,
+  "block": 2,
+  "date": "2026-03-07",
+  "type": "match",
+  "duration_min": 105,
+  "partners_or_opponents": ["Rhea (partner)", "vs. the Saturday regulars"],
+  "location": "Golden Gate Park, court 12",
+  "arrived": "Okay. Nothing special.",
+  "session_narrative": "Doubles. Won 6-4, 7-5. Serve felt slow the whole time, kept telling Rhea I was struggling with it. Three double faults total, all second-set. First serve percentage looked reasonable, I stopped tracking mid-match. Rhea won us the second set with her poaching. My best contribution was two returns of serve down the middle that they didn't handle.",
+  "tracked": {
+    "first_serve_pct": 58,
+    "double_faults": 3,
+    "unforced_errors": "not tracked"
+  },
+  "take_away": "Won but the serve was a drag on the whole match. Feels slow. Not sure the new toss is worth it."
+}

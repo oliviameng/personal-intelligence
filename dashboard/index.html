@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Court Sense — Personal Tennis Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F6F1; --surface:#FFFFFF; --ink:#12261C;
+    --green:#0E4D3A; --green-soft:#E4EFE7; --gray:#6E7A72;
+    --hairline:#E4E4DD; --lime:#C6F24E; --red:#DE5B32;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased}
+  .app{max-width:880px;margin:0 auto;min-height:100vh}
+
+  .ribbon{
+    background:var(--lime);color:var(--green);
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.06em;text-transform:uppercase;text-align:center;
+    padding:8px 20px;border-bottom:1px solid #B8DF48;
+  }
+
+  .appbar{
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    padding:20px 28px;position:sticky;top:0;z-index:20;
+    background:rgba(247,246,241,.9);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--hairline);
+  }
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand .mark{width:26px;height:26px;border-radius:50%;background:var(--lime);position:relative;overflow:hidden}
+  .brand .mark::after{content:'';position:absolute;inset:0;border-bottom:1.5px solid var(--green);border-radius:50%;transform:translateY(-50%)}
+  .brand h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.02em;color:var(--green)}
+  .sync{font-size:12px;color:var(--gray);display:flex;align-items:center;gap:10px}
+  .pulse{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .refresh-btn{
+    display:flex;align-items:center;gap:7px;background:var(--green);color:#F2F7F0;
+    border:none;border-radius:20px;padding:7px 14px;cursor:pointer;
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:12.5px;
+    transition:transform .12s, background .15s;
+  }
+  .refresh-btn:hover{background:#0B3D2E}
+  .refresh-btn:active{transform:scale(.97)}
+
+  main{padding:32px 28px 80px}
+
+  .hero{margin-bottom:24px}
+  .eyebrow{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);font-weight:500;margin-bottom:10px}
+  .hero h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,5.5vw,46px);letter-spacing:-.03em;line-height:1.02;color:var(--green)}
+  .hero .meta{margin-top:10px;font-size:15px;color:var(--gray)}
+  .hero .meta b{color:var(--ink);font-weight:600}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--hairline);border-radius:16px;overflow:hidden;
+    background:var(--surface);margin:20px 0 32px;
+  }
+  .stat{padding:18px 20px;border-right:1px solid var(--hairline)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:26px;letter-spacing:-.03em;line-height:1.1;color:var(--green)}
+  .stat span{font-size:11.5px;color:var(--gray);display:block;margin-top:4px}
+
+  .section-head{display:flex;justify-content:space-between;align-items:baseline;margin:32px 0 14px}
+  .section-head h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:21px;letter-spacing:-.02em;color:var(--green)}
+  .section-head .note{font-size:12.5px;color:var(--gray)}
+
+  .persona{
+    background:var(--surface);border:1px solid var(--hairline);border-radius:16px;
+    padding:22px 24px;margin-bottom:14px;
+  }
+  .persona h4{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;
+    letter-spacing:-.01em;color:var(--green);margin-bottom:10px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .persona h4 .lane{
+    font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+    color:var(--gray);background:var(--green-soft);padding:3px 9px;border-radius:12px;
+  }
+  .persona .body{font-size:14.5px;color:var(--ink);line-height:1.6}
+  .persona .body p{margin-top:10px}
+  .persona .body p:first-child{margin-top:0}
+  .persona .body strong{color:var(--green);font-weight:600}
+  .persona .directive{
+    margin-top:14px;padding-top:12px;border-top:1px solid var(--hairline);
+    font-size:13.5px;color:var(--green);font-weight:500;
+  }
+
+  .timeline{margin-top:14px}
+  .session{
+    display:flex;gap:16px;padding:16px 2px;border-bottom:1px solid var(--hairline);
+  }
+  .session:last-child{border-bottom:none}
+  .session .datebox{
+    min-width:54px;text-align:center;background:var(--surface);
+    border:1px solid var(--hairline);border-radius:12px;padding:9px 4px;height:fit-content;
+  }
+  .session .datebox b{
+    display:block;font-family:'Space Grotesk',sans-serif;font-weight:700;
+    font-size:19px;letter-spacing:-.02em;line-height:1.1;color:var(--green);
+  }
+  .session .datebox span{font-size:10.5px;color:var(--gray);text-transform:uppercase;letter-spacing:.06em}
+  .session .content{flex:1;min-width:0}
+  .session h5{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;letter-spacing:-.01em;color:var(--ink);margin-bottom:4px}
+  .session .tagline{font-size:12px;color:var(--gray);margin-top:2px}
+  .session p{font-size:13.5px;color:var(--gray);margin-top:6px}
+  .session .metrics{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
+  .chip{
+    font-size:11.5px;color:var(--green);background:var(--green-soft);
+    padding:3px 9px;border-radius:10px;font-weight:500;
+  }
+
+  .empty, .error{
+    background:var(--surface);border:1px solid var(--hairline);border-radius:16px;
+    padding:28px;text-align:center;color:var(--gray);
+  }
+  .empty h4, .error h4{font-family:'Space Grotesk',sans-serif;color:var(--ink);margin-bottom:8px;font-size:17px}
+  .empty code, .error code{
+    background:var(--green-soft);color:var(--green);padding:2px 8px;border-radius:6px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;
+  }
+
+  footer{
+    padding:24px 28px 40px;font-size:11.5px;color:var(--gray);
+    border-top:1px solid var(--hairline);margin-top:32px;
+  }
+  footer a{color:var(--green)}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="ribbon">Illustrative data · fabricated athlete log for demonstration</div>
+
+  <header class="appbar">
+    <div class="brand">
+      <div class="mark"></div>
+      <h1>Court Sense</h1>
+    </div>
+    <div class="sync">
+      <span class="pulse"></span>
+      <span id="syncLabel">Loading…</span>
+      <button class="refresh-btn" id="refreshBtn">Refresh</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Staff Report</div>
+      <h2 id="athleteName">—</h2>
+      <div class="meta" id="blockMeta">—</div>
+    </section>
+
+    <div class="stats" id="stats">
+      <div class="stat"><b id="statBlock">—</b><span>Block</span></div>
+      <div class="stat"><b id="statSessions">—</b><span>Sessions</span></div>
+      <div class="stat"><b id="statDays">—</b><span>Day span</span></div>
+      <div class="stat"><b id="statModel">—</b><span>Model</span></div>
+    </div>
+
+    <div class="section-head">
+      <h3>Staff report</h3>
+      <span class="note">Three personas · one shared log</span>
+    </div>
+    <div id="personas"></div>
+
+    <div class="section-head">
+      <h3>Session history</h3>
+      <span class="note" id="sessionCount">—</span>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </main>
+
+  <footer>
+    Personal project. Sample data is fabricated. Not affiliated with or endorsed by any employer.
+    Repo: <a href="https://github.com/oliviameng/personal-intelligence">personal-intelligence</a>.
+  </footer>
+</div>
+
+<script>
+const REPORT_URL = "../synthesis/output/latest.json";
+const ENTRIES_INDEX = "../sample_data/entries/";
+const DEMO_SESSIONS = 12;
+
+async function fetchJSON(url){
+  const r = await fetch(url, {cache:"no-store"});
+  if(!r.ok) throw new Error(`${url}: ${r.status}`);
+  return r.json();
+}
+
+function daySpan(a, b){
+  const [d1,d2] = [new Date(a), new Date(b)];
+  return Math.round((d2 - d1) / (1000*60*60*24)) + 1;
+}
+
+function renderMarkdownParagraphs(md){
+  const stripped = md.replace(/^##?\s+.*$/gm, "").trim();
+  const parts = stripped.split(/\n{2,}/);
+  const directiveIdx = parts.findIndex(p => /^\*\*This block:\*\*/.test(p));
+  const body = (directiveIdx === -1 ? parts : parts.slice(0, directiveIdx))
+    .map(p => `<p>${escapeAndBold(p)}</p>`).join("");
+  const directive = directiveIdx === -1 ? "" :
+    `<div class="directive">${escapeAndBold(parts[directiveIdx])}</div>`;
+  return body + directive;
+}
+
+function escapeAndBold(s){
+  return s
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
+}
+
+function renderPersonas(sections){
+  const order = ["coach","psychologist","tactics"];
+  const lanes = {coach:"Technical", psychologist:"Mental", tactics:"Strategy"};
+  const container = document.getElementById("personas");
+  container.innerHTML = order.map(k => {
+    const s = sections[k];
+    if(!s) return "";
+    return `
+      <article class="persona">
+        <h4>${s.heading.replace(/ — .*/,"")}<span class="lane">${lanes[k]}</span></h4>
+        <div class="body">${renderMarkdownParagraphs(s.body)}</div>
+      </article>`;
+  }).join("");
+}
+
+function renderHeader(report){
+  document.getElementById("athleteName").textContent = report.athlete;
+  document.getElementById("blockMeta").innerHTML =
+    `Block <b>${report.block}</b> · sessions ` +
+    `<b>${report.sessions_covered[0]}–${report.sessions_covered[report.sessions_covered.length-1]}</b> · ` +
+    `<b>${report.date_range[0]}</b> to <b>${report.date_range[1]}</b>`;
+  document.getElementById("statBlock").textContent = report.block;
+  document.getElementById("statSessions").textContent = report.sessions_covered.length;
+  document.getElementById("statDays").textContent = daySpan(report.date_range[0], report.date_range[1]);
+  document.getElementById("statModel").textContent = report.model.replace(/^claude-/,"");
+  const gen = new Date(report.generated_at);
+  document.getElementById("syncLabel").textContent = `Synced · ${gen.toLocaleDateString()}`;
+}
+
+async function loadEntries(){
+  const files = Array.from({length: DEMO_SESSIONS}, (_,i) =>
+    ENTRIES_INDEX + `session_${String(i+1).padStart(2,"0")}.json`);
+  const entries = [];
+  for(const f of files){
+    try{ entries.push(await fetchJSON(f)); }catch{}
+  }
+  return entries;
+}
+
+function renderTimeline(entries){
+  const timeline = document.getElementById("timeline");
+  document.getElementById("sessionCount").textContent =
+    `${entries.length} entries · ${entries[0].date} to ${entries[entries.length-1].date}`;
+  timeline.innerHTML = entries.slice().reverse().map(e => {
+    const [_, m, d] = e.date.split("-");
+    const monthName = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"][parseInt(m)-1];
+    const partners = (e.partners_or_opponents || []).join(", ");
+    const tracked = e.tracked || {};
+    const chips = [];
+    if(tracked.double_faults != null) chips.push(`DF <b>${tracked.double_faults}</b>`);
+    if(tracked.first_serve_pct != null) chips.push(`1st serve <b>${tracked.first_serve_pct}%</b>`);
+    chips.push(`${e.duration_min} min`);
+    return `
+      <div class="session">
+        <div class="datebox"><b>${parseInt(d)}</b><span>${monthName}</span></div>
+        <div class="content">
+          <h5>S${e.session} · ${e.type} · ${partners || e.location}</h5>
+          <p>${escapeAndBold(e.session_narrative)}</p>
+          <div class="metrics">${chips.map(c => `<span class="chip">${c}</span>`).join("")}</div>
+          <div class="tagline">Take-away: ${escapeAndBold(e.take_away)}</div>
+        </div>
+      </div>`;
+  }).join("");
+}
+
+function showEmpty(){
+  document.getElementById("personas").innerHTML = `
+    <div class="empty">
+      <h4>No synthesis output yet</h4>
+      <p>Run <code>python synthesis/run.py --demo</code> from the repo root, then refresh.</p>
+    </div>`;
+  document.getElementById("timeline").innerHTML = "";
+  document.getElementById("sessionCount").textContent = "";
+}
+
+function showError(msg){
+  document.getElementById("personas").innerHTML = `
+    <div class="error">
+      <h4>Could not load data</h4>
+      <p>${msg}</p>
+      <p style="margin-top:10px">Serve the repo with <code>python3 -m http.server 8000</code> and open <code>http://localhost:8000/dashboard/</code>. Browsers block <code>file://</code> fetches.</p>
+    </div>`;
+  document.getElementById("timeline").innerHTML = "";
+  document.getElementById("sessionCount").textContent = "";
+}
+
+async function load(){
+  document.getElementById("syncLabel").textContent = "Loading…";
+  try{
+    const report = await fetchJSON(REPORT_URL);
+    renderHeader(report);
+    renderPersonas(report.sections);
+    const entries = await loadEntries();
+    if(entries.length) renderTimeline(entries);
+  }catch(e){
+    if(e.message && e.message.includes("404")) showEmpty();
+    else showError(e.message);
+    document.getElementById("syncLabel").textContent = "Not loaded";
+  }
+}
+
+document.getElementById("refreshBtn").addEventListener("click", load);
+load();
+</script>
+</body>
+</html>
